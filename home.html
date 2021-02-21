@@ -4,15 +4,36 @@
     <meta charset="UTF-8">
     <title>Home - Tipton Garage</title>
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-<div id="nav-placeholder"></div>
 
-<script>
+<div class="header"> <!-- Header for website -->
+    <h1>Tipton Garage</h1>
+</div>
+
+<div id="nav-placeholder"></div> <!-- Placeholder container for nav bar -->
+
+<script> /* Load nav bar from file into placeholder */
     $(function(){
         $("#nav-placeholder").load("common/topnavbar.html");
     });
 </script>
+
+<div class="row">
+    <div class="column side">
+        <h2 class="headingsmall">Test</h2>
+        <p class="text">Lorem ipsum</p>
+    </div>
+
+    <div class="column middle">
+        <h2 class="headingsmall">Test</h2>
+    </div>
+
+    <div class="column side">
+        <h2 class="headingsmall">Test</h2>
+    </div>
+</div>
 
 </body>
 </html>
