@@ -162,7 +162,7 @@ nav ul ul ul li {
     left:170px;
 }
 
-@media all and (max-width : 768px) {
+@media all and (max-width : 600px) {
 
     #logo {
         display: block;
@@ -265,7 +265,7 @@ nav ul ul ul li {
 
 }
 
-@media all and (max-width : 330px) {
+@media all and (max-width : 600px) {
 
     nav ul li {
         display:block;
