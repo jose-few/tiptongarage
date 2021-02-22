@@ -1,5 +1,5 @@
 .header {
-    background-color: darksalmon;
+    background-color: #b0deff;
     text-align: center;
     padding: 20px;
     color: white;
@@ -10,26 +10,3 @@
     text-align: center;
 }
 
-.column {
-    float: left;
-}
-
-.column.side {
-    width: 25%;
-}
-
-.column.middle {
-    width: 50%;
-}
-
-@media screen and (max-width: 750px) {
-    .column.side, .column.middle {
-        width: 100%;
-    }
-}
-
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
-}
