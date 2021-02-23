@@ -10,3 +10,11 @@
     text-align: center;
 }
 
+.footer {
+    background-color: #b0deff;
+    position: fixed;
+    left: 0%;
+    bottom: 0%;
+    width: 100%;
+}
+
