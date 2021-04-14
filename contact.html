@@ -17,11 +17,15 @@
 <div class="container-fluid">
     <h1>Contact Us</h1>
 </div>
-
-
-
-
-
+<div class="contactform">
+    <h1>Please fill out the form below to contact us.</h1>
+    <form action="contactSubmit.php" method="post">
+        <input type="text" name="name" placeholder="Name" id="name" required>
+        <input type="text" name="email" placeholder="Email" id="email" required>
+        <input type="text" name="query" placeholder="Your query..." id="query" required>
+        <input type="submit" value="Submit">
+    </form>
+</div>
 <div id="footer-placeholder"></div>
 <script>
     $(function(){

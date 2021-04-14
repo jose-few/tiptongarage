@@ -1,10 +1,6 @@
 <?php
 session_start();
-// Change this to your connection info.
-$DATABASE_HOST = '192.168.0.37';
-$DATABASE_USER = 'root';
-$DATABASE_PASS = '';
-$DATABASE_NAME = 'tipton';
+include '../db_info.php';
 // Try and connect using the info above.
 $con = mysqli_connect($DATABASE_HOST, $DATABASE_USER, $DATABASE_PASS, $DATABASE_NAME);
 if ( mysqli_connect_errno() ) {
