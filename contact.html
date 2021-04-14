@@ -14,17 +14,44 @@
         $("#nav-placeholder").load("common/navbar.html");
     });
 </script>
-<div class="container-fluid">
-    <h1>Contact Us</h1>
-</div>
-<div class="contactform">
-    <h1>Please fill out the form below to contact us.</h1>
-    <form action="contactSubmit.php" method="post">
-        <input type="text" name="name" placeholder="Name" id="name" required>
-        <input type="text" name="email" placeholder="Email" id="email" required>
-        <input type="text" name="query" placeholder="Your query..." id="query" required>
-        <input type="submit" value="Submit">
-    </form>
+<div class="container overflow-hidden">
+    <div class="row gy-6 p-3 justify-content-center">
+        <div class="col-3">
+            <h4>You can find us here:</h4>
+            <p>The Tipton Garage<br>Tipton St John<br>Near Sidmouth<br>Devon<br>EX10 0AF</p>
+        </div>
+        <div class="col-6">
+            <h3 class="text-center">Please fill out the form below to contact us:</h3>
+            <div class="contactform">
+                <form action="contactSubmit.php" method="post">
+                    <div class="input-group mb-3">
+                        <span class="input-group-text" id="namelabel">Your Name:</span>
+                        <input type="text" class="form-control" placeholder="Your Name" aria-label="Name" aria-describedby="namelabel" name="name" id="name">
+                    </div>
+                    <div class="input-group mb-3">
+                        <span class="input-group-text" id="emaillabel">Your Email:</span>
+                        <input type="text" class="form-control" placeholder="Your Email" aria-label="Email" aria-describedby="emaillabel" name="email" id="email">
+                    </div>
+                    <div class="input-group mb-3">
+                        <span class="input-group-text" id="querylabel">Your Query:</span>
+                        <textarea class="form-control" placeholder="Your Query" aria-label="Query" aria-describedby="querylabel" name="query" id="query"></textarea>
+                    </div>
+                    <div>
+                        <button class="btn btn-primary" type="submit">Submit Query</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="col-3">
+            <h4>Other Contact Information:</h4>
+            <h5>Opening Hours:</h5>
+            <p>Mon - Fri: 8.30AM - 5.30PM<br>Sat: 8.30AM - 12.30PM</p>
+            <h5>Phone:</h5>
+            <p>Call: 01404 812091<br>Fax: 01404 814597</p>
+            <h5>Emails:</h5>
+            <a href="mailto:tiptongarage@hotmail.co.uk">tiptongarage@hotmail.co.uk</a>
+        </div>
+    </div>
 </div>
 <div id="footer-placeholder"></div>
 <script>
