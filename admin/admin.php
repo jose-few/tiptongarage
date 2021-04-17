@@ -137,85 +137,107 @@ function bookingsDropdown($DATABASE_HOST, $DATABASE_USER, $DATABASE_PASS, $DATAB
         </div>
     </div>
 </nav>
-<h1>View Queries:</h1>
-<div class="table-responsive">
-    <table class="table table-hover">
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>Name</th>
-                <th>Email</th>
-                <th>Query</th>
-            </tr>
-        </thead>
-        <tbody>
-            <?php
-                loadContactQueries($DATABASE_HOST, $DATABASE_USER, $DATABASE_PASS, $DATABASE_NAME);
-            ?>
-        </tbody>
-    </table>
-</div>
-<h1>View Services:</h1>
-<div class="table-responsive">
-    <table class="table table-hover">
-        <thead>
-        <tr>
-            <th>ID</th>
-            <th>Name</th>
-            <th>Price</th>
-            <th>Comments</th>
-        </tr>
-        </thead>
-        <tbody>
-            <?php
-                loadServices($DATABASE_HOST, $DATABASE_USER, $DATABASE_PASS, $DATABASE_NAME);
-            ?>
-        </tbody>
-    </table>
-</div>
-<div>
-    <h1>Edit Services:</h1>
-    <form id="servicesForm" action="serviceUpdate.php" method="post">
-        <select form="servicesForm" name="service" id="service" class="form-select">
-            <?php
-                servicesDropdown($DATABASE_HOST, $DATABASE_USER, $DATABASE_PASS, $DATABASE_NAME);
-            ?>
-        </select>
-        <input type="submit" class="btn btn-light" value="Edit Service">
-    </form>
-    <a href="newService.php" class="btn btn-light" role="button">Add New Service</a>
-</div>
-<h1>View Bookings:</h1>
-<div class="table-responsive">
-    <table class="table table-hover">
-        <thead>
-        <tr>
-            <th>ID</th>
-            <th>Service Requested</th>
-            <th>Customer Name</th>
-            <th>Vehicle Make</th>
-            <th>Vehicle Model</th>
-            <th>Requested Time-Slot</th>
-            <th>Comments</th>
-        </tr>
-        </thead>
-        <tbody>
-            <?php
-                loadBookings($DATABASE_HOST, $DATABASE_USER, $DATABASE_PASS, $DATABASE_NAME);
-            ?>
-        </tbody>
-    </table>
-</div>
-<div>
-    <h1>Adjust Bookings:</h1>
-    <form id="bookingsForm" action="bookingUpdate.php" method="post">
-        <select form="bookingsForm" name="booking" id="booking" class="form-select">
-            <?php
-                bookingsDropdown($DATABASE_HOST, $DATABASE_USER, $DATABASE_PASS, $DATABASE_NAME);
-            ?>
-        </select>
-        <input type="submit" class="btn btn-light" value="Adjust Booking">
-    </form>
+<div class="container overflow-hidden">
+    <div class="row gy-6 p-3 justify-content-center">
+        <div class="col-2">
+            <h5>Tipton Garage Admin Page</h5>
+            <p>
+                Here you can view contact queries,
+                make adjustments to services the garage
+                offers, and view/edit bookings made
+                by customers.
+            </p>
+        </div>
+        <div class="col-8">
+            <div class="queries">
+                <h3 class="tipton-header">View Contact Queries:</h3>
+                <div class="table-responsive">
+                    <table class="table table-hover">
+                        <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Query</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <?php
+                        loadContactQueries($DATABASE_HOST, $DATABASE_USER, $DATABASE_PASS, $DATABASE_NAME);
+                        ?>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <br>
+            <div class="services">
+                <h3 class="tipton-header">View Services:</h3>
+                <div class="table-responsive">
+                    <table class="table table-hover">
+                        <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Price</th>
+                            <th>Comments</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <?php
+                        loadServices($DATABASE_HOST, $DATABASE_USER, $DATABASE_PASS, $DATABASE_NAME);
+                        ?>
+                        </tbody>
+                    </table>
+                </div>
+                <br>
+                <h4 class="tipton-header">Adjust Services:</h4>
+                <form id="servicesForm" action="serviceUpdate.php" method="post">
+                    <select form="servicesForm" name="service" id="service" class="form-select">
+                        <?php
+                        servicesDropdown($DATABASE_HOST, $DATABASE_USER, $DATABASE_PASS, $DATABASE_NAME);
+                        ?>
+                    </select>
+                    <input type="submit" class="btn btn-light" value="Edit Service">
+                </form>
+                <a href="newService.php" class="btn btn-light" role="button">Add New Service</a>
+            </div>
+            <br>
+            <div class="bookings">
+                <h3 class="tipton-header">View Bookings:</h3>
+                <div class="table-responsive">
+                    <table class="table table-hover">
+                        <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Service Requested</th>
+                            <th>Customer Name</th>
+                            <th>Vehicle Make</th>
+                            <th>Vehicle Model</th>
+                            <th>Requested Time-Slot</th>
+                            <th>Comments</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <?php
+                        loadBookings($DATABASE_HOST, $DATABASE_USER, $DATABASE_PASS, $DATABASE_NAME);
+                        ?>
+                        </tbody>
+                    </table>
+                </div>
+                <br>
+                <h4 class="tipton-header">Adjust Bookings:</h4>
+                <form id="bookingsForm" action="bookingUpdate.php" method="post">
+                    <select form="bookingsForm" name="booking" id="booking" class="form-select">
+                        <?php
+                        bookingsDropdown($DATABASE_HOST, $DATABASE_USER, $DATABASE_PASS, $DATABASE_NAME);
+                        ?>
+                    </select>
+                    <input type="submit" class="btn btn-light" value="Adjust Booking">
+                </form>
+            </div>
+        </div>
+        <div class="col-2"></div>
+    </div>
 </div>
 </body>
 </html>
