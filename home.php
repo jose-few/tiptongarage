@@ -8,12 +8,7 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-<div id="nav-placeholder"></div> <!-- Placeholder container for nav bar -->
-<script> /* Load nav bar from file into placeholder */
-    $(function(){
-        $("#nav-placeholder").load("common/navbar.html");
-    });
-</script>
+<?php include "./common/navbar.html" ?>
 <div class="container-fluid">
     <h1 class="text-center">
         Welcome to Tipton Garage.
@@ -33,7 +28,7 @@
                    <h4>Modern Car Services:</h4>
                    <p>We carry out all the essential regular maintenance and servicing of your car, plus fault diagnosis and repair, MOT testing and spares.</p>
                    <img class="rounded img-fluid" src="img/home-mod-small.jpg">
-                   <a class="btn btn-primary" href="modern.html" role="button">View Modern Services</a>
+                   <a class="btn btn-primary" href="modern.php" role="button">View Modern Services</a>
                </div>
             </div>
             <div class="container p-3">
@@ -41,7 +36,7 @@
                     <h4>Classic Car Services:</h4>
                     <p>For classic and cherished cars, we offer a tailored service to extend everyday use and life into graceful old age, as well as resolving the inevitable problems that develop over time.</p>
                     <img class="rounded img-fluid" src="img/home-classic-small.jpg">
-                    <a class="btn btn-primary" href="classic.html" role="button">View Classic Services</a>
+                    <a class="btn btn-primary" href="classic.php" role="button">View Classic Services</a>
                 </div>
             </div>
             <div class="container p-3">
@@ -50,13 +45,13 @@
                     <p>Our extensive experience in preparing and running cars for track and competition gives us the edge in specialist engine build and maintenance.</p>
                     <p>We also advise on, source and fit performance parts, and our rolling-road tuning facility is extensively employed to optimise and calibrate performance development and improvements.</p>
                     <img class="rounded img-fluid" src="img/harrington-sunbeam-300x156.jpg">
-                    <a class="btn btn-primary" href="classic.html" role="button">View Track and Competition Services</a>
+                    <a class="btn btn-primary" href="track.php" role="button">View Track and Competition Services</a>
                 </div>
             </div>
             <div class="container p-3">
                 <div class="row align-items-start">
                     <h4>Or why not get in touch?</h4>
-                    <a class="btn btn-primary" href="contact.html" role="button">Contact Us</a>
+                    <a class="btn btn-primary" href="contact.php" role="button">Contact Us</a>
                 </div>
             </div>
         </div>
@@ -64,12 +59,7 @@
         </div>
     </div>
 </div>
-<div id="footer-placeholder"></div> <!-- Placeholder for footer -->
-<script>
-    $(function(){
-        $("#footer-placeholder").load("common/footer.html"); /*Load footer into placeholder */
-    });
-</script>
+<?php include "./common/footer.html" ?>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
 </body>
 </html>

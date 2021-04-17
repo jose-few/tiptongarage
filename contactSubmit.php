@@ -14,4 +14,4 @@ $stmt->bind_param("sss", $_POST['name'], $_POST['email'], $_POST['query']);
 $stmt->execute();
 $stmt->close();
 $con->close();
-header('Location: contact.html');
+header('Location: contact.php');

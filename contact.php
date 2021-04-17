@@ -8,12 +8,7 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-<div id="nav-placeholder"></div> <!-- Container placeholder for nav bar -->
-<script> /* Load nav bar into placeholder */
-    $(function(){
-        $("#nav-placeholder").load("common/navbar.html");
-    });
-</script>
+<?php include "./common/navbar.html" ?>
 <div class="container overflow-hidden">
     <div class="row gy-6 p-3 justify-content-center">
         <div class="col-3">
@@ -58,12 +53,7 @@
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d631.5254232560889!2d-3.289657837577176!3d50.71805251558319!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x486d9bf7985add8d%3A0xc3e9da824f2b272f!2sTipton%20Garage!5e0!3m2!1sen!2suk!4v1618409317261!5m2!1sen!2suk" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy"></iframe>        </div>
     </div>
 </div>
-<div id="footer-placeholder"></div>
-<script>
-    $(function(){
-        $("#footer-placeholder").load("common/footer.html");
-    });
-</script>
+<?php include "./common/footer.html" ?>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
 </body>
 </html>

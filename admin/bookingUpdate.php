@@ -28,12 +28,12 @@ function checkBookings($DATABASE_HOST, $DATABASE_USER, $DATABASE_PASS, $DATABASE
     if ( mysqli_connect_errno() ) {
         exit('Failed to connect to MySQL: ' . mysqli_connect_error());
     }
-    $stmt = $con->prepare('SELECT id, service, bookee, time, comment  FROM bookings WHERE id = ?');
+    $stmt = $con->prepare('SELECT id, service, bookee, make, model, time, comment  FROM bookings WHERE id = ?');
     $stmt->bind_param('i', $_POST['booking']);
     $stmt->execute();
     $stmt->store_result();
     if ($stmt->num_rows > 0) {
-        $stmt->bind_result($id,$service, $bookee, $time, $comment);
+        $stmt->bind_result($id,$service, $bookee, $make, $model, $time, $comment);
         $stmt->fetch();
         echo "<div class='input-group mb-3'>";
         echo "<span class='input-group-text' id='id'>Booking ID</span>";
@@ -46,6 +46,14 @@ function checkBookings($DATABASE_HOST, $DATABASE_USER, $DATABASE_PASS, $DATABASE
         echo "<div class='input-group mb-3'>";
         echo "<span class='input-group-text' id='bookee'>Booking Creator</span>";
         echo "<input type='text' class='form-control' name='bookingbookee' id='bookingbookee' placeholder='$bookee' aria-label='Booker' aria-describedby='bookee'>";
+        echo "</div>";
+        echo "<div class='input-group mb-3'>";
+        echo "<span class='input-group-text' id='vehMake'>Vehicle Make</span>";
+        echo "<input type='text' class='form-control' name='bookingMake' id='bookingMake' placeholder='$make' aria-label='Make' aria-describedby='vehMake'>";
+        echo "</div>";
+        echo "<div class='input-group mb-3'>";
+        echo "<span class='input-group-text' id='vehModel'>Vehicle Model</span>";
+        echo "<input type='text' class='form-control' name='bookingModel' id='bookingModel' placeholder='$model' aria-label='Model' aria-describedby='vehModel'>";
         echo "</div>";
         echo "<div class='input-group mb-3'>";
         echo "<span class='input-group-text' id='time'>Booking Time-Slot</span>";
@@ -65,12 +73,12 @@ function deleteBooking($DATABASE_HOST, $DATABASE_USER, $DATABASE_PASS, $DATABASE
     if ( mysqli_connect_errno() ) {
         exit('Failed to connect to MySQL: ' . mysqli_connect_error());
     }
-    $stmt = $con->prepare('SELECT id, service, bookee, time, comment  FROM bookings WHERE id = ?');
+    $stmt = $con->prepare('SELECT id, service, bookee, make, model, time, comment  FROM bookings WHERE id = ?');
     $stmt->bind_param('i', $_POST['booking']);
     $stmt->execute();
     $stmt->store_result();
     if ($stmt->num_rows > 0) {
-        $stmt->bind_result($id,$service, $bookee, $time, $comment);
+        $stmt->bind_result($id,$service, $bookee, $make, $model, $time, $comment);
         $stmt->fetch();
         echo "<div class='input-group mb-3'>";
         echo "<span class='input-group-text' id='id'>Booking ID</span>";
@@ -83,6 +91,14 @@ function deleteBooking($DATABASE_HOST, $DATABASE_USER, $DATABASE_PASS, $DATABASE
         echo "<div class='input-group mb-3'>";
         echo "<span class='input-group-text' id='bookee'>Booking Creator</span>";
         echo "<input type='text' class='form-control' name='bookingbookee' id='bookingbookee' value='$bookee' aria-label='Booker' aria-describedby='bookee' readonly>";
+        echo "</div>";
+        echo "<div class='input-group mb-3'>";
+        echo "<span class='input-group-text' id='vehMake'>Vehicle Make</span>";
+        echo "<input type='text' class='form-control' name='bookingMake' id='bookingMake' value='$make' aria-label='Make' aria-describedby='vehMake' readonly>";
+        echo "</div>";
+        echo "<div class='input-group mb-3'>";
+        echo "<span class='input-group-text' id='vehModel'>Vehicle Model</span>";
+        echo "<input type='text' class='form-control' name='bookingModel' id='bookingModel' value='$model' aria-label='Model' aria-describedby='vehModel' readonly>";
         echo "</div>";
         echo "<div class='input-group mb-3'>";
         echo "<span class='input-group-text' id='time'>Booking Time-Slot</span>";

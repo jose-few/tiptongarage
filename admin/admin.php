@@ -84,13 +84,13 @@ function loadBookings($DATABASE_HOST, $DATABASE_USER, $DATABASE_PASS, $DATABASE_
     if ( mysqli_connect_errno() ) {
         exit('Failed to connect to MySQL: ' . mysqli_connect_error());
     }
-    $stmt = $con->prepare('SELECT id, service, bookee, time, comment FROM bookings');
+    $stmt = $con->prepare('SELECT id, service, bookee, make, model, time, comment FROM bookings');
     $stmt->execute();
     $stmt->store_result();
     if ($stmt->num_rows > 0) {
-        $stmt->bind_result($id, $service, $bookee, $time, $comment);
+        $stmt->bind_result($id, $service, $bookee, $make, $model, $time, $comment);
         while ($stmt->fetch()) {
-            echo "<tr><th scope='row'>$id</th><td>$service</td><td>$bookee</td><td>$time</td><td>$comment</td></tr>";
+            echo "<tr><th scope='row'>$id</th><td>$service</td><td>$bookee</td><td>$make</td><td>$model</td><td>$time</td><td>$comment</td></tr>";
         }
     } else {
         echo "No queries found!";
@@ -104,13 +104,13 @@ function bookingsDropdown($DATABASE_HOST, $DATABASE_USER, $DATABASE_PASS, $DATAB
     if ( mysqli_connect_errno() ) {
         exit('Failed to connect to MySQL: ' . mysqli_connect_error());
     }
-    $stmt = $con->prepare('SELECT id, service, bookee FROM bookings');
+    $stmt = $con->prepare('SELECT id, service, bookee, make, model FROM bookings');
     $stmt->execute();
     $stmt->store_result();
     if ($stmt->num_rows > 0) {
-        $stmt->bind_result($id, $service, $bookee);
+        $stmt->bind_result($id, $service, $bookee, $make, $model);
         while ($stmt->fetch()) {
-            echo "<option value='$id'>$id - $service - $bookee</option>";
+            echo "<option value='$id'>$id - $service - $bookee - $make - $model</option>";
         }
     } else {
         echo "No queries found!";
@@ -191,8 +191,10 @@ function bookingsDropdown($DATABASE_HOST, $DATABASE_USER, $DATABASE_PASS, $DATAB
         <thead>
         <tr>
             <th>ID</th>
-            <th>Service</th>
-            <th>Bookee</th>
+            <th>Service Requested</th>
+            <th>Customer Name</th>
+            <th>Vehicle Make</th>
+            <th>Vehicle Model</th>
             <th>Requested Time-Slot</th>
             <th>Comments</th>
         </tr>
