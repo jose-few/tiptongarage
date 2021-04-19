@@ -11,11 +11,11 @@
 <?php include "./common/navbar.html" ?>
 <div class="container overflow-hidden">
     <div class="row gy-6 p-3 justify-content-center">
-        <div class="col-3">
+        <div class="col-sm-3">
             <h4>You can find us here:</h4>
             <p>The Tipton Garage<br>Tipton St John<br>Near Sidmouth<br>Devon<br>EX10 0AF</p>
         </div>
-        <div class="col-6">
+        <div class="col-sm-6">
             <h3 class="text-center">Please fill out the form below to contact us:</h3>
             <div class="contactform">
                 <form action="contactSubmit.php" method="post">
@@ -37,7 +37,7 @@
                 </form>
             </div>
         </div>
-        <div class="col-3">
+        <div class="col-sm-3">
             <h4>Other Contact Information:</h4>
             <h5>Opening Hours:</h5>
             <p>Mon - Fri: 8.30AM - 5.30PM<br>Sat: 8.30AM - 12.30PM</p>

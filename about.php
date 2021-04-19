@@ -11,9 +11,9 @@
 <?php include "./common/navbar.html" ?>
 <div class="container overflow-hidden">
     <div class="row gy-6 p-3 justify-content-center">
-        <div class="col-2">
+        <div class="col-sm-2">
         </div>
-        <div class="col-8">
+        <div class="col-sm-8">
             <div>
                 <h1 class="tipton-team">The Tipton Team:</h1>
             </div>
@@ -83,7 +83,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-2">
+        <div class="col-sm-2">
         </div>
     </div>
 </div>

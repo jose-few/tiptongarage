@@ -37,10 +37,10 @@ function loadServiceList($DATABASE_HOST, $DATABASE_USER, $DATABASE_PASS, $DATABA
 <?php include "./common/navbar.html" ?>
 <div class="container overflow-hidden">
     <div class="row gy-6 p-3 justify-content-center">
-        <div class="col-2"></div>
-        <div class="col-8">
+        <div class="col-sm-2"></div>
+        <div class="col-sm-8">
             <div class="bookingform">
-                <h3 class="tipton-header">Please fill out the form below to contact us.</h3>
+                <h3 class="tipton-header">Please fill out the form below to create a booking with us.</h3>
                 <form action="bookingSubmit.php" method="post">
                     <div class="input-group mb-3">
                         <span class="input-group-text" id="vehMake">Your Vehicle Make:</span>
@@ -76,7 +76,7 @@ function loadServiceList($DATABASE_HOST, $DATABASE_USER, $DATABASE_PASS, $DATABA
                 </form>
             </div>
         </div>
-        <div class="col-2"></div>
+        <div class="col-sm-2"></div>
     </div>
 </div>
 <?php include "./common/footer.html" ?>

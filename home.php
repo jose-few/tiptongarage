@@ -19,9 +19,9 @@
 </div>
 <div class="container overflow-hidden">
     <div class="row gy-6 p-3 justify-content-center">
-        <div class="col-3">
+        <div class="col-sm-3">
         </div>
-        <div class="col-6">
+        <div class="col-sm-6">
             <h3 class="text-center">Have a look at the services we offer:</h3>
             <div class="container p-3">
                <div class="row align-items-start">
@@ -55,7 +55,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-3">
+        <div class="col-sm-3">
         </div>
     </div>
 </div>

@@ -11,8 +11,8 @@
 <?php include "./common/navbar.html" ?>
 <div class="container overflow-hidden">
     <div class="row gy-6 p-3 justify-content-center">
-        <div class="col-2"></div>
-        <div class="col-8">
+        <div class="col-sm-2"></div>
+        <div class="col-sm-8">
             <h3 class="tipton-header">Track and Competition Services:</h3>
             <br>
             <h5>SPECIALISTS IN MOTORSPORT</h5>
@@ -47,7 +47,7 @@
                 <a class="btn btn-primary" role="button" href="bookings.php">Book Now</a>
             </div>
         </div>
-        <div class="col-2"></div>
+        <div class="col-sm-2"></div>
     </div>
 </div>
 <?php include "./common/footer.html" ?>
